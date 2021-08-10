@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: goliano- <goliano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:17:12 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/02 16:32:25 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:42:30 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c, int fd)
+static void	ft_putchar(char c, int fd)
 {
 	write(fd, &c, 1);
 }

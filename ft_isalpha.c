@@ -6,16 +6,16 @@
 /*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 15:06:54 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/09 15:00:56 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:40:10 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	int		isAlpha;
+	int		is_alpha;
 
-	isAlpha = 0;
+	is_alpha = 0;
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		isAlpha = 1;
-	return (isAlpha);
+		is_alpha = 1;
+	return (is_alpha);
 }

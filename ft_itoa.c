@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: goliano- <goliano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 18:21:50 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/06 11:54:28 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:41:59 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word_size(int n)
+static int	word_size(int n)
 {
 	int				i;
 	unsigned int	num;
@@ -32,7 +32,7 @@ int	word_size(int n)
 	return (i);
 }
 
-int	to_div(unsigned int n)
+static int	to_div(unsigned int n)
 {
 	int		l;
 
@@ -45,17 +45,7 @@ int	to_div(unsigned int n)
 	return (l);
 }
 
-unsigned int	handle_neg_number(int n)
-{
-	unsigned int	number;
-
-	number = n;
-	if (n < 0)
-		number = -n;
-	return (number);
-}
-
-char	*init_num(char *num, int n, unsigned int *number, int *i)
+static char	*init_num(char *num, int n, unsigned int *number, int *i)
 {
 	if (n < 0)
 	{

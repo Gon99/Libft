@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: goliano- <goliano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 18:07:11 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/09 16:40:07 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:44:14 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char del)
+static int	count_words(char const *s, char del)
 {
 	int		c;
 	int		flag;
@@ -35,7 +35,7 @@ int	count_words(char const *s, char del)
 	return (c);
 }
 
-char	*split_word(char const *s, char del, int i)
+static char	*split_word(char const *s, char del, int i)
 {
 	int		aux;
 	int		r;
@@ -63,7 +63,7 @@ char	*split_word(char const *s, char del, int i)
 	return (word);
 }
 
-void	fill_split(char const *s, char **str, char c)
+static void	fill_split(char const *s, char **str, char c)
 {
 	int	i;
 	int	flag;
@@ -89,14 +89,12 @@ void	fill_split(char const *s, char **str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
 	int		w;
 	char	**str;
 	int		flag;
 
 	if (!s)
 		return (NULL);
-	i = -1;
 	flag = 0;
 	w = count_words(s, c);
 	str = (char **)malloc(sizeof(char *) * (w + 1));

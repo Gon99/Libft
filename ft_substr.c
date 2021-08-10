@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: goliano- <goliano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 13:55:20 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/10 12:01:11 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:43:18 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_length(char const *s, unsigned int start)
+static size_t	get_length(char const *s, unsigned int start)
 {
 	size_t	i;
 

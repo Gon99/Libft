@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goliano- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: goliano- <goliano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 15:41:19 by goliano-          #+#    #+#             */
-/*   Updated: 2021/08/09 16:31:24 by goliano-         ###   ########.fr       */
+/*   Updated: 2021/08/10 17:43:12 by goliano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_char(char c, char const *set)
+static int	check_char(char c, char const *set)
 {
 	int		i;
 
